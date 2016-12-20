@@ -3,5 +3,5 @@
 
 <!DOCTYPE html>
 
-<div><h1><spring:message code="success"/>!</h1></div>
+<div><h1>Success!</h1></div>
 <a href="j_spring_security_logout">Logout</a>
