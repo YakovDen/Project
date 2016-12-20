@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+    <definition name="default" template="/WEB-INF/jsp/templates/default.jsp">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="header" value="/WEB-INF/jsp/templates/header.jsp"/>
+        <put-attribute name="body" value=""/>
+        <put-attribute name="footer" value="/WEB-INF/jsp/templates/footer.jsp"/>
+    </definition>
+    
+    <definition name="/web/error" extends="default">
+        <put-attribute name="title" value="ERROR PAGE"/>
+        <put-attribute name="body" value="/error.html"/>
+    </definition>    
+    
+    <definition name="/web/success" extends="default">
+        <put-attribute name="title" value="Success"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/success.jsp"/>
+    </definition>
+    
+   	<definition name="/web/index" template="/WEB-INF/jsp/index.jsp">
+        <put-attribute name="title" value="WELCOME PAGE"/>
+    </definition>
+    
+    <definition name="/web/login" template="/WEB-INF/jsp/login.jsp">
+        <put-attribute name="title" value="LOGIN PAGE"/>
+    </definition>
+
+    <definition name="/web/admin/index" extends="default">
+        <put-attribute name="title" value="Main page"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/admin/index.jsp"/>
+        <put-attribute name="footer" value=""/>
+    </definition>
+    
+    <definition name="/web/user/index" extends="default">
+        <put-attribute name="title" value="Main page"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/user/index.jsp"/>
+        <put-attribute name="footer" value=""/>
+    </definition>
+
+    <definition name="/web/admin/add_edit" extends="default">
+        <put-attribute name="title" value="Adding books"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/admin/formForAddBook.jsp"/>
+    </definition>
+
+    <definition name="/web/admin/allOrders" extends="default">
+        <put-attribute name="title" value="All orders"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/admin/allOrders.jsp"/>
+    </definition>
+    
+    <definition name="/web/admin/dateOverBook" extends="default">
+        <put-attribute name="title" value="Not returned book"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/admin/dateOverBook.jsp"/>
+    </definition>
+    
+    <definition name="/web/admin/userOrders" extends="default">
+        <put-attribute name="title" value="User's orders"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/admin/userOrders.jsp"/>
+    </definition>
+    
+    <definition name="/web/admin/userReadings" extends="default">
+        <put-attribute name="title" value="User's borrowed books"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/admin/userReadings.jsp"/>
+    </definition>
+    
+    <definition name="/web/admin/del_edit" extends="default">
+        <put-attribute name="title" value="Removal book"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/admin/formForDelBook.jsp"/>
+    </definition>
+    
+    <definition name="/web/book/search" extends="default">
+        <put-attribute name="title" value="Results"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/resultOfSearch.jsp"/>
+    </definition>
+
+	
+    <definition name="/web/user/orders" extends="default">
+        <put-attribute name="title" value="Orders"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/user/orders.jsp"/>
+    </definition>
+    
+    <definition name="/web/user/readings" extends="default">
+        <put-attribute name="title" value="Borrowed books"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/user/readings.jsp"/>
+    </definition>
+</tiles-definitions>

@@ -1,0 +1,16 @@
+daoImpl\base\Connect.class
+daoImpl\util\HibernateUtil.class
+dao\DAO.class
+daoImpl\KindOfTourDAOImpl.class
+daoImpl\base\ThreadLocalConnection$1.class
+dao\IUserDAO.class
+dao\ITypeOfTourDAO.class
+daoImpl\TourDAOImpl.class
+dao\IKindOfTourDAO.class
+daoImpl\base\BaseDAO.class
+daoImpl\TypeOfTourDAOImpl.class
+daoImpl\util\CustomNamingStrategy.class
+daoImpl\base\exception\DaoException.class
+daoImpl\base\ThreadLocalConnection.class
+daoImpl\UserDAOImpl.class
+dao\ITourDAO.class

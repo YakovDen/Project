@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://java.sun.com/xml/ns/javaee" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+id="WebApp_ID" version="3.0">
+    <display-name>MVCMyTourAgency project</display-name>
+ 
+ <context-param>  
+  <param-name>spring.profiles.active</param-name>  
+  <param-value>dev</param-value>  
+</context-param>  
+<context-param>  
+  <param-name>spring.profiles.default</param-name>  
+  <param-value>dev</param-value>  
+</context-param>  
+<context-param>  
+  <param-name>spring.liveBeansView.mbeanDomain</param-name>  
+  <param-value>dev</param-value>  
+</context-param> 
+  
+ 
+  <!-- Фильтр для перекодировки в utf8 -->
+  <filter>
+    <filter-name>SetCharFilter</filter-name>
+    <filter-class>filter.SetCharFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>SetCharFilter</filter-name>
+    <url-pattern>/DemoCharServlet</url-pattern>
+  </filter-mapping>
+    
+    <!-- Описание корневого контейнера, разделяемого всеми сервлетами и фильтрами -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			/WEB-INF/dispatcher-servlet.xml, /WEB-INF/security-context.xml						
+		</param-value>
+	</context-param>
+	
+	<!-- Создаёт контейнер Spring, разделяемый всеми сервлетами и фильтрами -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	<!-- Базовый сервлет, обрабатывает все запросы к приложению -->
+	<servlet>
+		<servlet-name>dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>    
+	<servlet-mapping>
+		<servlet-name>dispatcher</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping> 
+	
+	<filter>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>   	
+  	
+</web-app>

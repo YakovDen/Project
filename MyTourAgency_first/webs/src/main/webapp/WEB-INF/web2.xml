@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+ <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>	  	
+  	<servlet-name>LoginLogic</servlet-name>
+  	<servlet-class>filter.LoginLogic</servlet-class>
+  </servlet>
+   <servlet-mapping>
+  	<servlet-name>LoginLogic</servlet-name>
+  	<url-pattern>/login</url-pattern>
+  </servlet-mapping>   
+ 
+  <servlet>
+    <servlet-name>Add</servlet-name>
+    <servlet-class>servlet.AddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Add</servlet-name>
+    <url-pattern>/add</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+    <filter-name>SetCharFilter</filter-name>
+    <filter-class>filter.SetCharFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>SetCharFilter</filter-name>
+    <url-pattern>/DemoCharServlet</url-pattern>
+  </filter-mapping>
+  
+  <servlet>
+    <servlet-name>Delete</servlet-name>
+    <servlet-class>servlet.DeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Delete</servlet-name>
+    <url-pattern>/delete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ReservationsServlet</servlet-name>
+    <servlet-class>servlet.ReservationsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReservationsServlet</servlet-name>
+    <url-pattern>/reservations</url-pattern>
+  </servlet-mapping>
+    
+  <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>servlet.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>    
+    <servlet-name>DiscountServlet</servlet-name>
+    <servlet-class>servlet.DiscountServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DiscountServlet</servlet-name>
+    <url-pattern>/discount</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>  	
+  	<display-name>UserTourReserved</display-name>
+  	<servlet-name>UserTourReserved</servlet-name>
+  	<servlet-class>commands.UserTourReserved</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UserTourReserved</servlet-name>
+  	<url-pattern>/UserTourReserved</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>  	
+  	<display-name>PayTourCommand</display-name>
+  	<servlet-name>PayTourCommand</servlet-name>
+  	<servlet-class>commands.PayTourCommand</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>PayTourCommand</servlet-name>
+  	<url-pattern>/PayTourCommand</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>  	
+  	<display-name>AdminController</display-name>
+  	<servlet-name>AdminController</servlet-name>
+  	<servlet-class>controllers.AdminController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AdminController</servlet-name>
+  	<url-pattern>/AdminController</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>    	
+  	<display-name>UserController</display-name>
+  	<servlet-name>UserController</servlet-name>
+  	<servlet-class>controllers.UserController</servlet-class>
+  </servlet>  
+  <servlet-mapping>
+  	<servlet-name>UserController</servlet-name>
+  	<url-pattern>/UserController</url-pattern>
+  </servlet-mapping>
+ 
+</web-app>

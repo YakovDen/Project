@@ -1,0 +1,20 @@
+*.jar
+*.war
+*.ear
+*.class
+*.log
+*.log.1
+*.log.2
+*.log.3
+*.properties
+.classpath
+.project
+/.metadata/
+/RemoteSystemTempFiles/
+/library/**/.settings/*
+/library/**/target/*
+<<<<<<< HEAD
+/library/**/build/*
+=======
+/library/**/build/*
+>>>>>>> 37ea4b327681569a7cea0405a74f598e66356704
