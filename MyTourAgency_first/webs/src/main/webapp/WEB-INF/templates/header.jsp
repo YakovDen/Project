@@ -6,15 +6,15 @@
  <div style="text-align: right;"> <a href="?language=en"><b>[EN]</b></a>	|	<a href="?language=ru"><b>[RU]</b></a></div>
  
  <div style="text-align: left;"> 
- 	
+ 		
  		<div>
-	 		<spring:message code="user"/>		
-	 		[<a href="/web/UserController/logout"><spring:message code="logout"/></a>]
+	 		User
+	 		[<a href="/web/UserController/logout">Logout</a>]
  		</div>
  	 	
  		<div>
- 			<spring:message code="admin"/>		
- 			[<a href="/webs/AdminController/logout"><spring:message code="logout"/></a>]
+ 			 Admin
+ 			[<a href="/webs/AdminController/logout">Logout</a>]
  		</div>
  	
  	

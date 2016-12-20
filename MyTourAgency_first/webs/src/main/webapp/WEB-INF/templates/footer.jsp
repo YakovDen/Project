@@ -10,12 +10,12 @@
    <div style="text-align: left;"> 
  	
  		<div>
-	 		[<a href="/webs/UserController/login"><em><b><spring:message code="to.main.page"/></b></em></a>]
+	 		[<a href="/webs/UserController/login"><em><b>To main page</b></em></a>]
  		</div>
   	
  	
  		<div>
- 			[<a href="/webs/AdminController/login"><em><b><spring:message code="to.main.page"/></b></em></a>]
+ 			[<a href="/webs/AdminController/login"><em><b>To main page</b></em></a>]
  		</div> 	
  	
  </div>

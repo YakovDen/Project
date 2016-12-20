@@ -33,10 +33,10 @@ public class Welcome {
 	final Logger log = Logger.getLogger(Welcome.class);
 	
 	
-	/*@RequestMapping(value="/welcome", method = {RequestMethod.POST, RequestMethod.GET})
+	@RequestMapping(value="/welcome", method = {RequestMethod.POST, RequestMethod.GET})
 	public String index(ModelMap model, HttpServletRequest request) {
 			return "welcome";
-	}*/
+	}
 	
 	/*@RequestMapping(value="/welcome", method = {RequestMethod.POST, RequestMethod.GET})
 	public String adminPage(Model map, HttpServletRequest request) {
